@@ -1,13 +1,7 @@
-int main(void)
-{
-    char letter;
+#!/bin/bash
 
-    for (letter = 'a'; letter <= 'z'; letter++)
-    {
-        putchar(letter);
-    }
+for (( i = 97; i <= 122; i++ )); do
+  putchar "$i"
+done
 
-    putchar('\n');
-
-    return 0;
-}
+putchar $'\n'
