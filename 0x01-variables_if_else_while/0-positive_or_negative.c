@@ -1,13 +1,32 @@
-#!/bin/bash
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
-n=$((RANDOM % 201 - 100))
+/**
+* main - print if the number is postive, zero, or negative
+*
+* Description: using the main function
+* this program prints "Programming is positive, zero, or negative
+* Return: 0
+*/
+int main(void)
+{
+int n;
 
-echo "$n"
-
-if ((n > 0)); then
-    echo "is positive"
-elif ((n == 0)); then
-    echo "is zero"
-else
-    echo "is negative"
-fi
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+  /*Code goes below here */
+if (n > 0)
+{
+	printf("%i is positive\n", n);
+}
+else if (n == 0)
+{
+	printf("%i is zero\n", n);
+}
+else if (n < 0)
+{
+	printf("%i is negative\n", n);
+}
+return (0);
+}
