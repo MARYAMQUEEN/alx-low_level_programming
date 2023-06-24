@@ -1,14 +1,18 @@
 #include "main.h"
 
 /**
- * print_numbers - Prints the numbers from 0-9.
+ * print_line - Draws a straight line using the character _.
+ * @n: The number of _ characters to be printed.
  */
-void print_numbers(void)
+void print_line(int n)
 {
-	int num;
+	int len;
 
-	for (num = 0; num <= 9; num++)
-		_putchar((num % 10) + '0');
+	if (n > 0)
+	{
+		for (len = 0; len < n; len++)
+			_putchar('_');
+	}
 
 	_putchar('\n');
 }
